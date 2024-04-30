@@ -1,0 +1,165 @@
+/* Add your CSS styles here */
+/* Example styles - adjust as needed */
+body{
+  background-color: mistyrose;
+  background-image: linear-gradient(to right, #F0C27B, #4B1248);
+}
+.container {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 10px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(56, 84, 95, 0.5); /* Sky blue color with opacity */
+  background-color: honeydew;
+  background-image: linear-gradient(to right, #917957, #bec0b6);
+}
+
+.product-container {
+  display: flex;
+  align-items: flex-start;
+}
+.product-info {
+  margin-left: 20px;
+}
+.product-image {
+  max-width: 400px;
+}
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  cursor: pointer;
+}
+.product-description {
+  margin-top: 20px;
+}
+.detail-line {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.color-demo {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  border-radius: 5px;
+  margin-right: 5px;
+  border: 1px solid #000;
+  cursor: pointer;
+  position: relative;
+  font-size: 20px;
+}
+.color-demo::after {
+  content: '\2713';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  display: none;
+}
+.color-demo.selected::after {
+  display: block;
+}
+.size-selector {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.size-selector select {
+  display: none;
+}
+.size-option {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  margin-right: 5px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+.size-option.selected {
+  background-color: #000;
+  color: #fff;
+}
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.quantity-controls button {
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  text-align: center;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#price {
+  font-size: 22px; /* Adjust font size as needed */
+  color: blue;
+}
+
+
+#add-to-cart {
+  background-color: blue;
+  color: white;
+  padding: 7px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#add-to-cart:hover {
+  background-color: blue;
+}
+input[type="radio"]:checked + label {
+transform: scale(1.1); /* Add a visual effect when selected */
+background-color: #866363; /* Adjust color when selected */
+text-align: center;
+}
+
+/* Set a single background color for all size labels */
+div.size-options label {
+text-align: center;
+height: 20px;
+width:100px;
+background-color: #a0a0a0;
+margin-right: 5px; /* Adjust the gap between label and input */
+display: inline-block; /* Display label and input in one line */
+}
