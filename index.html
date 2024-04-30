@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="product-container">
+        <div>
+            <img src="w1.webp" alt="Product Image" class="product-image">
+            
+            <!-- Thumbnails -->
+            <div>
+                <img src="w2.webp" alt="Thumbnail 2" class="thumbnail" onclick="changeImage('w2.webp')">
+                <img src="w3.webp" alt="Thumbnail 4" class="thumbnail" onclick="changeImage('w3.webp')">
+                <img src="w4.webp" alt="Thumbnail 3" class="thumbnail" onclick="changeImage('w4.webp')">
+                <img src="w1.webp" alt="Thumbnail 1" class="thumbnail" onclick="changeImage('w1.webp')">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <p id="product-vendor">Marmeto</p>
+            
+            <h2 id="product-title">Embrace Sideboard</h2>
+            <hr>
+            <p id="price">$12999</p>
+            
+            <p id="compare-price"><del>$19999</del></p>
+
+            <!-- Calculate % off using JS -->
+            <p id="discount" style="color:red;"> <span id="discount-percent"></span>%</p>
+             <hr>
+
+            <!-- Color variant selector -->
+            <label for="color-selector">Color:</label>
+            <div>
+                <div class="color-demo" style="background-color: yellow" onclick="updateColor(this)"></div>
+                <div class="color-demo" style="background-color: green" onclick="updateColor(this)"></div>
+                <div class="color-demo" style="background-color: blue" onclick="updateColor(this)"></div>
+                <div class="color-demo" style="background-color: pink" onclick="updateColor(this)"></div>
+            </div>
+
+            <div class="detail-line"></div>
+         <hr>
+
+            <!-- Size selector -->
+            <p>Size:</p>
+    <div class="size-options">
+        <input type="radio" id="size-small" name="size" value="Small" onchange="updateVariant()">
+        <label for="size-small">Small</label>
+
+        <input type="radio" id="size-medium" name="size" value="Medium" onchange="updateVariant()">
+        <label for="size-medium">Medium</label>
+
+        <input type="radio" id="size-large" name="size" value="Large" onchange="updateVariant()">
+        <label for="size-large">Large</label>
+
+        <input type="radio" id="size-extra-large" name="size" value="Extra large" onchange="updateVariant()">
+        <label for="size-extra-large">Extra large</label>
+
+        <input type="radio" id="size-xxl" name="size" value="XXL" onchange="updateVariant()">
+        <label for="size-xxl">XXL</label>
+       
+    </div>
+
+            <br><br>
+
+            <!-- Quantity selector -->
+            <label for="quantity-selector">Quantity:</label>
+            <div class="quantity-controls">
+                <button onclick="decreaseQuantity()">-</button>
+                <input type="number" id="quantity-selector" value="1" min="1">
+                <button onclick="increaseQuantity()">+</button>
+            </div>
+
+            
+            <!-- Modal -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <p id="cart-message">Embrace Sideboard with Color <span id="selected-color"></span> and Size <span id="selected-size"></span> added to cart</p>
+                </div>
+            </div>
+            <button id="add-to-cart" onclick="showModal()">Add to Cart</button>
+
+      <hr>
+
+            <!-- Description -->
+            <div class="product-description">
+                <h3>Description:</h3>
+                <p>The Embrace Sideboard is a stylish wear. With a top cloth designed to provide superior protection and look great, this storage solution is both functional and attractive. It fits seamlessly into any home decor, with clean lines and a timeless look. Crafted from premium materials for a combination of style, durability, and reliability.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
